@@ -4,7 +4,7 @@ use Illuminate\Support\Str;
 
 $url=parse_url(getenv("CLEARDB_DATABASE_URL"));
 $host=$url["host"] ?? null;
-$databse=$url["path"] ?? null;
+$databse=substr($url["path"],1);
 $user=$url["user"] ?? null;
 $password=$url["pass"] ?? null;
 
@@ -51,7 +51,6 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => $url,
             'host' => $host,
             'port' => env('DB_PORT', '3306'),
             'database' => $database,
