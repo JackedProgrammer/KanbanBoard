@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Str;
 
+$host="bkcrbpn4hhdy9ho9t56e-mysql.services.clever-cloud.com";
+$databse="bkcrbpn4hhdy9ho9t56e";
+$user="uo18hifzqumfzinf";
+$password="tdxxEELiJtGCGxusah2l";
+
 return [
 
     /*
@@ -46,11 +51,11 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'host' => $host,
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'database' => $database,
+            'username' => $user,
+            'password' => $password,
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
