@@ -2,11 +2,10 @@
 
 use Illuminate\Support\Str;
 
-$url=parse_url(getenv("CLEARDB_DATABASE_URL"));
-$host=$url["host"] ?? null;
-$databse=substr($url["path"],1);
-$user=$url["user"] ?? null;
-$password=$url["pass"] ?? null;
+$host="bkcrbpn4hhdy9ho9t56e-mysql.services.clever-cloud.com";
+$database="bkcrbpn4hhdy9ho9t56e";
+$user="uo18hifzqumfzinf";
+$password="tdxxEELiJtGCGxusah2l";
 
 return [
 
@@ -51,12 +50,12 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url'=>$url,
-            'host' => $host,
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_HOST', $host),
             'port' => env('DB_PORT', '3306'),
-            'database' => $database,
-            'username' => $user,
-            'password' => $password,
+            'database' => env('DB_DATABASE', $databse),
+            'username' => env('DB_USERNAME', $user),
+            'password' => env('DB_PASSWORD', $password),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
