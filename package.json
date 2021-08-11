@@ -8,7 +8,7 @@
         "hot": "mix watch --hot",
         "prod": "npm run production",
         "production": "mix --production",
-        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install && npm run prod",
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run prod",
         "postinstall": "npm run prod"
     },
     "devDependencies": {
