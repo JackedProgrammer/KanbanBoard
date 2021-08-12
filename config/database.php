@@ -2,10 +2,10 @@
 
 use Illuminate\Support\Str;
 
-$host="bkcrbpn4hhdy9ho9t56e-mysql.services.clever-cloud.com";
-$database="bkcrbpn4hhdy9ho9t56e";
-$user="uo18hifzqumfzinf";
-$password="tdxxEELiJtGCGxusah2l";
+$host="db server";
+$database="database";
+$user="user";
+$password="pass";
 
 return [
 
